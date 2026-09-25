@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QkTor-Image Converter</title>
+    <link rel="shortcut icon" href="./assets/favicon.x-icon" type="image/x-icon">
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logoandtext">
+                <div class="logo"><img src="./assets/sociologo.png" alt="QuickiTor"></div>
+                <div class="logotxt">QuickiTor</div>
+            </div>
+            <div class="navLinks">
+                <a href="javascript:void(0)" onclick="openHelp('o')">Help</a>
+            </div>
+        </nav>
+        <div class="headerfoot"></div>
+        <div class="container1">
+            <div class="c_upl_container">
+                <div class="c_upl_cont_portion">
+                    <img src="" width="100%" height="auto" id="c_view_image">
+                </div>
+                <div class="c_upl_btn_portion">
+                    <select name="upl_image_type" id="uplType">
+                        <option value="0">Uploading's Image Type</option>
+                        <option value="1" title="JPG,JPEG,PNG,AVIF,ICO,GIF,APNG,BMP,WEBP">Others (Non-SVG)</option>
+                        <option value="2">SVG</option>
+                    </select>
+                    <label for="uplimg">
+                        <div class="uplbtn">
+                            <div class="upllogoandtext">
+                                <div class="upllogo"><img src="./assets/add2.png" alt="uploadImage"></div>
+                                <div class="upltext">Upload Images</div>
+                            </div>
+                            <input type="file" name="uplimage" id="uplimg" multiple>
+
+                        </div>
+                    </label>
+                    <select name="applyAllExt" id="allExt">
+                        <option value="jpeg">Convert All To JPEG</option>
+                        <option value="jpg">Convert All To JPG</option>
+                        <option value="png" selected>Convert All To PNG</option>
+                        <option value="avif">Convert All To AVIF</option>
+                        <option value="bmp">Convert All To BMP</option>
+                        <option value="webp">Convert All To WEBP</option>
+                        <option value="apng">Convert All To APNG</option>
+                        <option value="x-icon">Convert All To ICO</option>
+                    </select>
+                    <div class="qualityRange" id="qltPortionR">
+                        <input type="range" name="qualityRange" id="qrange" min="0" max="100" value="80">
+                        <div class="th_range_txt">80%</div>
+                    </div>
+                    <div class="uplbtn dnlBtn" id="dnlBtnPopup">
+                        <div class="upllogoandtext">
+                            <div class="upllogo" style="margin-left: 25px;"><img src="./assets/dnl.png"
+                                    alt="uploadImage"></div>
+                            <div class="upltext" style="margin-left: 0px;">Convert & Download</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="c_view_container">
+                <div class="c_view_wrap">
+                    <div class="c_view_lists">
+                        <div class="c_view_list_wrap" id="thums_tag">
+                            <!-- starting of sub tags  -->
+
+                            <!-- ending of sub tags  -->
+                        </div>
+                    </div>
+                    <div class="c_view_controls">
+                        <div class="c_view_controls_wrap" id="cControlPor">
+                            <div class="c_view_cont_head">
+                                <div class="c_view_cont_h_in">
+                                    Please Upload External Images, Linked To Your Svgs
+                                </div>
+                            </div>
+                            <div class="c_view_cont_bdy">
+                                <div class="alfils" id="alfilss">
+                                    <div class="extraUpls">
+                                        <div class="extraUplsText">There are No External Images!</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="headerfoot" style="margin-bottom: 80px;">
+            <div title="Refresh" id="refreshButton" class="headerfootRefreshbtn">
+                <div class="refreshbtninner"></div>
+            </div>
+        </div>
+    </header>
+    <main class="main-section">
+        
+    </main>
+    <footer class="site-footer">
+        <p>&copy; <span id="cpy_year"></span> QuickiTor. All rights reserved.</p>
+    </footer>
+    <!-- tags for help popup -->
+    <div class="Q_HelpSteps_cont" id="helpPopID">
+        <div class="Q_HelpSteps_wrap">
+            <div class="Q_HelpSteps_imgtag">
+                <img class="helpImg" src="./assets/h4.jpg" />
+            </div>
+            <div class="Q_HelpSteps_steptag">
+                <div class="helpstpClsBtn">
+                    <button onclick="openHelp('c')">&times;</button>
+
+                </div>
+                <div class="helpStepstag">
+                    <h3>How QuickiTor Works?</h3>
+                    <ul>
+                        <li><strong>Select Mode -</strong> Others (Non-Svg) or Svg to Other Conversion.</li>
+                        <li><strong>Upload Files -</strong> Upload Single or Multiple Images.</li>
+                        <li><strong>Pick Format -</strong> Set One format for all, or set Individually for convert.</li>
+                        <li><strong>Convert and Save -</strong> One Click, instant save (if Multiple files then save
+                            file will be in Zip File).</li>
+                    </ul>
+                    <p class="formats">JPEG/JPG - PNG - WebP - AVIF - ICO - GIF - APNG - BMP - SVG</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- tags for popup of saving  -->
+    <div class="popupModalWho" id="popupContid">
+        <div class="popupCont">
+            <div class="popupContWrap">
+                <div class="popInputs">
+                    <label for="filenameIn">
+                        <div class="popfilename">Enter File Name for Zip </div>
+                        <input type="text" value="qkTor_Images.zip" name="filename" id="filenameIn" />
+                    </label>
+                </div>
+                <div class="popbtns">
+                    <button>Close</button>
+                    <button onclick="download_bundle()">Start</button>
+                </div>
+                <div class="popProgress">
+                    <div class="popProgressBar">
+                        <div class="popProgressBarCo"></div>
+                    </div>
+                    <div class="popProgressText">
+                        0%
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./libs/FileSaver.js"></script>
+    <script src="./libs/jszip.js"></script>
+    <script src="./scripts/script.js"></script>
+</body>
+
+</html>

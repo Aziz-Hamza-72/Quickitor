@@ -1,0 +1,924 @@
+* {
+    box-sizing: content-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+header nav {
+    width: 100%;
+    height: 80px;
+    position: relative;
+    top: 0;
+    left: 0;
+    background-color: #edf2fa;
+    border: none;
+    border-bottom: 1px solid silver;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav .logoandtext {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logoandtext .logo img {
+    width: 40px;
+    height: 40px;
+    position: relative;
+}
+
+.logoandtext .logotxt {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #333;
+    font-size: 25px;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+nav .navLinks {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.navLinks a {
+    text-decoration: none;
+    color: #333;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.1s ease-in;
+}
+
+.navLinks a:hover {
+    color: red;
+}
+
+
+header .container1 {
+    width: 900px;
+    height: 500px;
+    position: relative;
+    top: 20px;
+    left: 0px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid black;
+    border-top: none;
+    border-bottom: none;
+}
+
+header .container1 .c_upl_container {
+    width: 300px;
+    height: 100%;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    background-color: #d1e2ff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-right: 1px solid black;
+}
+
+
+
+header .container1 .c_view_container {
+    width: 600px;
+    height: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    background-color: white;
+
+}
+
+header .container1 .c_dtl_container {
+    width: 300px;
+    height: 100vh;
+    position: relative;
+    top: 0;
+    left: 0;
+    background-color: #ddd;
+}
+
+.c_upl_btn_portion {
+    width: 100%;
+    height: 300px;
+    position: relative;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #efefef;
+
+}
+
+select {
+    width: 80%;
+    height: 40px;
+    border-radius: 0px;
+    background-color: white;
+    border: 1px solid black;
+    box-shadow: 5px 5px 0px black;
+    outline: none;
+    font-size: 15px;
+}
+
+select option {
+
+    text-align: center;
+}
+
+.c_upl_btn_portion label {
+    width: 80%;
+    position: relative;
+}
+
+.c_upl_btn_portion label .uplbtn,
+.uplbtn {
+    width: 100%;
+    height: 40px;
+    position: relative;
+    border: 1px solid black;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 5px 5px 0px black;
+    cursor: pointer;
+
+}
+
+.uplbtn .upllogoandtext {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.uplbtn input[type=file] {
+    display: none;
+}
+
+.uplbtn .upllogo {
+    position: relative;
+    margin-left: -20px;
+    margin-top: 3px;
+}
+
+.uplbtn .upllogoandtext .upllogo img {
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+}
+
+.uplbtn .upllogoandtext .upltext {
+    font-size: 15px;
+    color: black;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+.dnlBtn {
+    transition: 0.09s ease-in;
+    width: 80%;
+}
+
+.dnlBtn:active {
+    box-shadow: 1px 1px 0px black;
+}
+
+.c_upl_cont_portion {
+    width: 100%;
+    height: 40%;
+    position: relative;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-image: url(./../assets/sociologo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 80px 80px;
+    border-bottom: 1px solid black;
+}
+
+.qualityRange {
+    width: 80%;
+    height: 40px;
+    position: relative;
+    border: 1px solid black;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 5px 5px 0px black;
+}
+
+#qltPortionR {
+    display: none;
+}
+
+input[type=range] {
+    width: 70%;
+    position: relative;
+    -webkit-appearance: none;
+    /* Override default CSS styles */
+    appearance: none;
+    height: 10px;
+    /* Specified height */
+    border: 1px solid black;
+    border-radius: 10px;
+    background: #d3d3d3;
+    /* Grey background */
+    outline: none;
+    /* Remove outline */
+    opacity: 0.7;
+    /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s;
+    /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+}
+
+input[type=range]:hover {
+    opacity: 1;
+    /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    /* Override default look */
+    appearance: none;
+    width: 15px;
+    /* Set a specific slider handle width */
+    height: 25px;
+    /* Slider handle height */
+    background: black;
+    /* Green background */
+    cursor: pointer;
+    /* Cursor on hover */
+}
+
+input[type=range]::-moz-range-thumb {
+    width: 15px;
+    /* Set a specific slider handle width */
+    height: 25px;
+    /* Slider handle height */
+    background: black;
+    /* Green background */
+    cursor: pointer;
+    /* Cursor on hover */
+}
+
+.qualityRange .qlty {
+    width: 30px;
+    height: auto;
+    text-align: center;
+    color: black;
+    font-weight: bolder;
+
+    margin-left: -13px;
+}
+
+header .headerfoot {
+    width: 900px;
+    height: 50px;
+    position: relative;
+    top: 20px;
+    left: 0px;
+    background-color: #efefef;
+    margin: auto;
+    border: 1px solid black;
+}
+
+.c_upl_cont_portion img {
+    max-width: 100%;
+    max-height: 100%;
+    /* aspect-ratio: 9 / 16; */
+    object-fit: contain;
+}
+
+.c_view_container .c_view_wrap {
+    width: 94%;
+    height: 94%;
+    position: relative;
+    margin: auto;
+    margin: 10px;
+    background-color: #efefef;
+    border: 1px solid black;
+    box-shadow: 10px 10px 0px black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.c_view_wrap .c_view_lists {
+    width: 100%;
+    height: 60%;
+    position: relative;
+}
+
+.c_view_lists .c_view_list_wrap {
+    width: 95%;
+    height: 95%;
+    position: relative;
+    margin: auto;
+    background-color: white;
+    background-image: url(./../assets/sociologo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 80px 80px;
+    margin-top: 2.5%;
+    border: 1px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    overflow-y: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.c_view_list_wrap .img_thumb_tag {
+    width: 250px;
+    height: auto;
+    position: relative;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 4px;
+    box-shadow: 1px 3px 0px black;
+}
+
+.img_thumb_tag .th_name_txt {
+    width: 90%;
+    height: auto;
+    position: relative;
+    margin: auto;
+    padding: 10px;
+}
+
+.th_name_txt span span {
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    background: black;
+    color: white;
+    font-weight: bold;
+}
+
+.img_thumb_tag .th_controls {
+    width: 90%;
+    height: auto;
+    position: relative;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.img_thumb_tag .th_controls .th_controls_sub {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 100%;
+}
+
+.th_controls_sub select {
+    width: 140px;
+    height: 30px;
+    position: relative;
+    outline: none;
+    border: 1px solid black;
+    background: white;
+    box-shadow: 0px 3px 0px black;
+    border-radius: 3px;
+}
+
+.th_controls_sub button {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    margin: 0 4px;
+    border: 1px solid black;
+    border-radius: 3px;
+    outline: none;
+    cursor: pointer;
+    box-shadow: 0px 3px 0px black;
+    transition: 0.08s ease-in;
+}
+
+.th_controls_sub button:active {
+    margin-top: 2px;
+    box-shadow: 0px 1px 0px black;
+}
+
+.th_controls_sub button img {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    margin: auto;
+    margin: 0 -2px;
+}
+
+.th_controls_sub input[type=range] {
+    width: 70%;
+}
+
+.th_controls_sub .th_range_txt {
+    font-size: 15px;
+    font-weight: bold;
+    color: black;
+    padding-left: 15px;
+}
+
+
+.c_view_wrap .c_view_controls {
+    width: 100%;
+    height: 35%;
+    background: #efefef;
+    position: relative;
+    background-image: url(./../assets/Quickitor.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 400px 130px;
+}
+
+.c_view_controls .c_view_controls_wrap {
+    width: 95%;
+    height: 85%;
+    position: relative;
+    margin: auto;
+    margin-top: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background: lavender;
+    border: none;
+    transform: scale(0, 1);
+    transition: transform 0.06s;
+}
+
+.c_view_controls_wrap .c_view_cont_head {
+    width: 100%;
+    height: 30%;
+    position: relative;
+    margin: auto;
+    border: 1px solid black;
+    background-color: rgba(0, 255, 76, 0.29);
+}
+
+.c_view_cont_head .c_view_cont_h_in {
+    text-align: center;
+    color: black;
+    padding: 10px;
+    font-size: 16px;
+    position: relative;
+    margin: auto;
+}
+
+.c_view_controls_wrap .c_view_cont_bdy {
+    width: 100%;
+    height: 70%;
+    position: relative;
+    margin: auto;
+    background-color: white;
+    border: 1px solid black;
+}
+
+.c_view_cont_bdy .alfils {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    overflow-y: auto;
+}
+
+.alfils .extraUpls {
+    width: 230px;
+    height: auto;
+    position: relative;
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: #eee;
+    border: 1px solid #333333;
+    padding: 8px;
+    border-radius: 5px;
+    box-shadow: 1px 2px 3px #aaaaaa;
+}
+
+.extraUpls .extraUplsText {
+    font-size: 16px;
+    font-family: Consolas;
+    margin-left: 10px;
+    text-wrap: wrap;
+}
+
+.extraUpls label {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    margin-right: 10px;
+    border: 1px solid #555555;
+    border-radius: 5px;
+    cursor: pointer;
+    background: -webkit-linear-gradient(#2a7fff, #124ba1);
+    background: linear-gradient(#2a7fff, #124ba1);
+}
+
+.extraUpls label>input[type=file] {
+    display: none;
+}
+
+.extraUpls label>.extraUplsImg {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    margin: auto;
+    background-image: url(./../assets/upl.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20px 20px;
+    margin-top: 5px;
+}
+
+
+
+/* popup for savings  */
+
+.popupModalWho {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 2;
+    transform: scale(0);
+    transition: transform 0.09s;
+}
+
+.popupCont {
+    width: 400px;
+    height: 160px;
+    position: relative;
+    border: 1px solid #2a7fff;
+    float: right;
+    right: 30px;
+    top: 50px;
+
+    box-shadow: 3px 3px 0px #2a7fff;
+}
+
+.show {
+    transform: scale(1);
+}
+
+
+.popupCont .popupContWrap {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: #edf2fa;
+}
+
+.popupContWrap .popProgress {
+    width: 92%;
+    height: 25%;
+    position: relative;
+    background: transparent;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.popProgress .popProgressBar {
+    width: 80%;
+    height: 10px;
+    position: relative;
+    /*background: #12c248;*/
+    background: #dddddd;
+    border-radius: 10px;
+}
+
+.popProgress .popProgressBar .popProgressBarCo {
+    width: 1%;
+    height: 100%;
+    position: relative;
+    background: #2a7fff;
+    border-radius: 10px;
+    transition: 0.03s;
+}
+
+.popProgress .popProgressText {
+    width: 20%;
+    height: auto;
+    position: relative;
+    color: black;
+    font-size: 17px;
+    text-align: center;
+}
+
+.popupContWrap .popInputs {
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+.popInputs label {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.popInputs label .popfilename {
+    font-size: 18px;
+    padding: 10px;
+    color: black;
+}
+
+.popInputs label input[type=text] {
+    width: 80%;
+    height: 25px;
+    border-radius: 3px;
+    border: 1px solid silver;
+    box-shadow: 1px 1px 3px #aaaaaa inset;
+    outline: none;
+    font-size: 15px;
+    padding-left: 10px;
+}
+
+.popupContWrap .popbtns {
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.popupContWrap .popbtns button {
+    width: 40%;
+    height: auto;
+    position: relative;
+    border: 1px solid silver;
+    background: white;
+    color: black;
+    font-size: 16px;
+    padding: 6px 10px;
+    cursor: pointer;
+    transition: 0.08s;
+}
+
+.popupContWrap .popbtns button:nth-of-type(1) {
+    border-radius: 5px 0px 0px 5px;
+}
+
+.popupContWrap .popbtns button:nth-of-type(2) {
+    border-radius: 0px 5px 5px 0px;
+    background: -webkit-linear-gradient(#2a7fff, #124ba1);
+    background: linear-gradient(#2a7fff, #124ba1);
+    color: white;
+}
+
+.popupContWrap .popbtns button:active {
+    box-shadow: 2px 2px 4px #999999 inset;
+}
+
+.headerfoot {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+}
+
+.headerfoot .headerfootRefreshbtn {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    background-color: white;
+    border: 1px solid black;
+    margin-right: 40px;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 3px 3px 0px black;
+}
+
+.headerfootRefreshbtn .refreshbtninner {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    margin: auto;
+    margin-top: 5px;
+    background-image: url(./../assets/refresh.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20px 20px;
+}
+
+.headerfootRefreshbtn:active {
+    margin-top: 2px;
+    margin-left: 2px;
+    box-shadow: 1px 1px 0px black;
+}
+
+
+
+.Q_HelpSteps_cont {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    margin: auto;
+    left: 0;
+    top: 0;
+    z-index: 5;
+    background: rgba(0, 0, 0, 0);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    transform: scale(0);
+    transition: transform 0.2s;
+}
+
+
+.Q_HelpSteps_cont .Q_HelpSteps_wrap {
+    width: 80%;
+    height: 80%;
+    background: white;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 30px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.Q_HelpSteps_wrap .Q_HelpSteps_imgtag,
+.Q_HelpSteps_wrap .Q_HelpSteps_steptag {
+    width: 50%;
+    height: 100%;
+    background: white;
+}
+
+.Q_HelpSteps_wrap .Q_HelpSteps_steptag {
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 30px 30px 0px;
+}
+
+.Q_HelpSteps_steptag .helpStepstag ul {
+    padding: 0;
+    list-style: none;
+}
+
+.helpStepstag li {
+    margin: 12px 0;
+    font-size: 16px;
+}
+
+.helpStepstag .formats {
+    color: #666;
+    font-size: 14px;
+    margin-top: 16px;
+}
+
+.Q_HelpSteps_wrap .Q_HelpSteps_imgtag {
+    border-radius: 30px 0px 0px 30px;
+}
+
+.Q_HelpSteps_wrap .Q_HelpSteps_imgtag img {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    object-fit: cover;
+    border-radius: 30px 0px 0px 30px;
+}
+
+.Q_HelpSteps_steptag .helpstpClsBtn {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+}
+
+.Q_HelpSteps_steptag button {
+    border: none;
+    outline: none;
+    color: #888;
+    background-color: transparent;
+    font-weight: bold;
+    font-size: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.Q_HelpSteps_steptag button:hover {
+    color: #333333;
+}
+
+.main-section {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.video-wrapper {
+    text-align: center;
+
+}
+
+.video-wrapper h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+}
+
+.demo-video {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    background-color: #000;
+}
+
+.video-caption {
+    margin-top: 0.75rem;
+    color: #555555;
+    font-size: 0.95rem;
+}
+
+/* Mobile  */
+@media (max-width: 768px) {
+    .video-wrapper h2 {
+        font-size: 1.4rem;
+    }
+
+    .main-section {
+        padding: 1.5rem 1rem;
+    }
+}
+
+.site-footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: #d1e2ff;
+    color: #444;
+    font-size: 0.9rem;
+}
